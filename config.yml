@@ -1,0 +1,40 @@
+
+commandDatabase:
+  driverClass: org.h2.Driver
+  user: sa
+  password: sa
+  url: jdbc:h2:./parquetdb
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.H2Dialect
+    hibernate.hbm2ddl.auto: create
+
+
+queryDatabase:
+  driverClass: org.h2.Driver
+  # this user should only be able to query the database, cannot have alter/insert/update/delete rights
+  user: sa
+  password: sa
+  url: jdbc:h2:./parquetdb
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.H2Dialect
+    hibernate.hbm2ddl.auto: create
+
+
+swagger:
+  resourcePackage: com.comodo.parquet.resources
+  title: Parquet Connection Application
+  version: 1.0.0
+  description: You may use Parquet application to upload parquet files and may run queries via REST API
+  contact: Can A. MOGOL
+  contactEmail: canmogol@gmail.com
+  contactUrl: github.com/canmogol
+  license: MIT
+  licenseUrl: https://en.wikipedia.org/wiki/MIT_License
+
+
+logging:
+  level: INFO
+  loggers:
+    com.comodo: DEBUG

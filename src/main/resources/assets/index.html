@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="ParquetApplication" ng-controller="parquetController">
+<!-- angular application's name is "ParquetApplication" -->
+<head>
+    <meta charset="utf-8"/>
+    <title translate="i18n_page_title">Parquet / Connection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <!--              -->
+    <!-- LOAD STYLES  -->
+    <!--              -->
+
+    <!-- Bootstrap Core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css"
+          crossorigin="anonymous">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/parquet-app.css">
+
+    <!--                -->
+    <!-- LOAD LIBRARIES -->
+    <!--                -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- load javascript libraries from content delivery network(s) -->
+    <!--angular-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!--                    -->
+    <!-- LOAD APPLICATION   -->
+    <!--                    -->
+
+    <!-- UTILITIES -->
+    <script src="js/ParquetUtils.js"></script>
+
+    <!-- APPLICATION -->
+    <script src="js/ParquetApplication.js"></script>
+    <script src="js/ParquetRoute.js"></script>
+
+    <!-- MAIN CONTROLLER -->
+    <script src="js/ParquetController.js"></script>
+
+    <!-- FILE UPLOAD -->
+    <script src="js/fileUpload/FileUploadDef.js"></script>
+    <script src="js/fileUpload/FileUploadViewModel.js"></script>
+    <script src="js/fileUpload/FileUploadAvailableListener.js"></script>
+    <script src="js/fileUpload/FileUploadFactory.js"></script>
+    <script src="js/fileUpload/FileUploadService.js"></script>
+    <script src="js/fileUpload/FileUploadController.js"></script>
+
+</head>
+
+<body>
+
+
+<header class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="container">
+        Parquet Application
+        <a href="#/">Main</a>
+        <a href="#/file">File</a>
+        <a href="#/connection">Connection</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <article class="row text-left">
+
+        <section class="col-md-12">
+
+            <!-- VIEW CONTAINER -->
+            <div ui-view></div>
+
+        </section>
+
+    </article>
+
+
+</main>
+
+<footer>
+    <div class="row" style="margin: 0">
+        <div class="col-lg-12">
+            <p class="pull-left">Parquet Application Footer</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
